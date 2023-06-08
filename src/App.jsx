@@ -8,7 +8,7 @@ function App() {
   
   
   const hasError = () => {
-    password === '' ? false : false
+    return password === '' ? true : false
   }
   const [password, SetPassord] = useState(false)
 
@@ -16,7 +16,6 @@ function App() {
     
   },[])
 
-  console.log(password)
   return (
     <>
 
@@ -37,8 +36,6 @@ function App() {
         width: '50%',
         backgroundColor: blue[500],
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
       }}>
       <div className='image'></div>
       </Card>
@@ -59,24 +56,25 @@ function App() {
         sx={{
          display: 'flex',
          flexDirection: 'column',
-         justifyItems: 'center',
+         justifyContent: 'center',
          alignItems: 'center',
          marginRight:'0px',
         }}
           >        
         </CardHeader>
         <CardContent sx={{m: 1, width: '30ch'}}>
-          <FormControl>
+          <FormControl component="form" noValidate >
 
             <TextField
               id="outlined-required"
               label="Email Addres"
+              type='email'
               sx={{margin: '10px'}}
               />
             <TextField    
               onChange={(e) => SetPassord(e.target.value)}        
-              error={hasError}
-              helperText="Incorrect entry."
+              error={hasError()}
+              helperText={hasError() ? 'Email or Password incorrect.' : "" }
               id="outlined-required"
               required
               type='password'
