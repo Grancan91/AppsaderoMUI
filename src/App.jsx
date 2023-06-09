@@ -1,6 +1,6 @@
 import { isValidElement, useEffect, useState } from 'react'
 import './App.css'
-import { Box, Card, CardHeader, Avatar, CardContent,InputAdornment, TextField, Divider, FormControl} from '@mui/material'
+import { Grid, Box, Card, CardHeader, Avatar, CardContent,InputAdornment, TextField, Divider, FormControl} from '@mui/material'
 import { blue } from '@mui/material/colors'
 import { AccountCircle } from '@mui/icons-material'
 function App() {
@@ -22,7 +22,9 @@ function App() {
     <Box sx={{ p: 2, border: '1px dashed grey' }} className='container-login'>
 
     {/*Card Container of 2 cards*/}
+
     <Card 
+    raised={true}
     alignItems={'center'} 
     justifyContent='center'
     sx={{
@@ -31,19 +33,28 @@ function App() {
       width: '45vw',
       backgroundColor: blue[500]}}>
       
+      <Grid container spacing={2}>
+      
+      <Grid item sm={6} xs={12}>
+
       {/*Card 1 Container for img*/}
       <Card sx={{
-        width: '50%',
+        width: '100%',
+        height: '100%',
         backgroundColor: blue[500],
         display: 'flex',
       }}>
       <div className='image'></div>
       </Card>
+      </Grid>
+      
+      <Grid items sm={6} xs={12}>
 
       {/* Content of Login Form*/}
       <Card
       sx={{
-        width: '50%',
+        width: '100%',
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -54,13 +65,13 @@ function App() {
         title='Login'
         titleTypographyProps={{ variant: 'h4' }}
         sx={{
-         display: 'flex',
-         flexDirection: 'column',
-         justifyContent: 'center',
-         alignItems: 'center',
-         marginRight:'0px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginRight:'0px',
         }}
-          >        
+        >        
         </CardHeader>
         <CardContent sx={{m: 1, width: '30ch'}}>
           <FormControl component="form" noValidate >
@@ -84,10 +95,11 @@ function App() {
               </FormControl>
         </CardContent>
       </Card>
+    </Grid>
+    </Grid>
     </Card>
     
     </Box>
-      
     </>
   )
 }
