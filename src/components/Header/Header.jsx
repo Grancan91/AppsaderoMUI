@@ -11,7 +11,7 @@ import { Button, AppBar, Box, Toolbar, IconButton, Typography } from '@mui/mater
 export const Header = () => {
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box disableGuters={true} sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
             <IconButton
@@ -25,16 +25,13 @@ export const Header = () => {
             <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
               Dashboard
             </Typography>
-            <Link
-              to="/"
-              style={{ color: "#FFF", textDecoration: "none", margin: "10px" }}
-            >
+            <Link to="/login" style={{ color: "#FFF", textDecoration: "none", margin: "10px" }}>
               <Button variant="outlined" color="inherit">
                 <Diversity1Icon sx={{ marginRight: "10px" }} />
                 Friends
               </Button>
             </Link>
-            <Link to="/" style={{ color: "#FFF", textDecoration: "none" }}>
+            <Link to="/dashboard" style={{ color: "#FFF", textDecoration: "none" }}>
               <Button variant="outlined" color="inherit">
                 <CalendarTodayIcon sx={{ marginRight: "10px" }} />
                 Calendar

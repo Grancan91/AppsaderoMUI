@@ -18,7 +18,11 @@ import {
 export const Footer = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar
+        position="fixed"
+        color="secondary"
+        sx={{ top: "auto", bottom: 0 }}
+      >
         <Toolbar>
           <IconButton
             fontSize="large"
@@ -28,24 +32,9 @@ export const Footer = () => {
           >
             <OutdoorGrillIcon />
           </IconButton>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            Dashboard
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
+            Copyright © 2023 Chuletapp Company. All rights reserved.
           </Typography>
-          <Link
-            to="/"
-            style={{ color: "#FFF", textDecoration: "none", margin: "10px" }}
-          >
-            <Button variant="outlined" color="inherit">
-              <Diversity1Icon sx={{ marginRight: "10px" }} />
-              Friends
-            </Button>
-          </Link>
-          <Link to="/" style={{ color: "#FFF", textDecoration: "none" }}>
-            <Button variant="outlined" color="inherit">
-              <CalendarTodayIcon sx={{ marginRight: "10px" }} />
-              Calendar
-            </Button>
-          </Link>
         </Toolbar>
       </AppBar>
     </Box>

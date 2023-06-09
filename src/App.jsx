@@ -1,8 +1,10 @@
 import { isValidElement, useEffect, useState } from 'react'
 import './App.css'
-import { Grid, Box, Card, CardHeader, Avatar, CardContent,InputAdornment, TextField, Divider, FormControl} from '@mui/material'
+import { Grid, Button, Box, Card, CardHeader, CardActions, Avatar, CardContent,InputAdornment, TextField, Divider, FormControl} from '@mui/material'
 import { blue } from '@mui/material/colors'
 import { AccountCircle } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
+
 function App() {
 
   
@@ -94,6 +96,11 @@ function App() {
               />
               </FormControl>
         </CardContent>
+        <CardActions>
+          <Link to='/home'>
+          <Button variant='outlined'>Login</Button>
+          </Link>
+        </CardActions>
       </Card>
     </Grid>
     </Grid>
