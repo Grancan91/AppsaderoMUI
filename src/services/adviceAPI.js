@@ -1,7 +1,7 @@
-import { api } from "./api";
+import { advice } from "./api";
 
 export async function getRandom(){
-    const  {data}  = await api.get()
+    const  {data}  = await advice.get()
     console.log(data)
 }
 

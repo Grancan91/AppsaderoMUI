@@ -1,5 +1,5 @@
+
 .container-login{
-  flex-grow: 1;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -8,7 +8,6 @@
 }
 
 .image {
-  flex-grow: 2;
   background-image: url('../public/DreamShaper_v6_vegetables_sending_invitation_to_a_steak_3.jpg'); /* Replace with the path to your image */
   background-size: cover;
   width: 100%;

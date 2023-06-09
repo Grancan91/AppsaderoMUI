@@ -25,8 +25,9 @@ function App() {
 
     {/*Card Container of 2 cards*/}
 
-    <Card 
+    <Card className='card-container'
     raised={true}
+    
     alignItems={'center'} 
     justifyContent='center'
     sx={{
