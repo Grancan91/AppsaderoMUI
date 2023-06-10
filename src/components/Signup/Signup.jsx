@@ -23,7 +23,9 @@ function Signup() {
         display={'flex'}
         flexDirection={'column'}
         alignItems={'center'}
-        backgroundColor= '#F1F1F1'
+       // backgroundColor= '#F1F1F1'
+        //backgroundColor= '#795548'
+        maxHeight='350px'
         >
             <Avatar sx={{ m: 1, mt: 4, bgcolor: 'background.default' }}>
                 <LockOutlined/>
