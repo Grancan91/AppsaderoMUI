@@ -12,5 +12,9 @@ export const lightTheme = createTheme({
     background: {
       default: "#712c7f",
     },
+    text: {
+      primary: "#689F38",
+      secondary: "#795548",
+   },    
   },
 });

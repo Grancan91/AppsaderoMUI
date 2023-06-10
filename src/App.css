@@ -10,7 +10,26 @@
 .image {
   background-image: url('../public/DreamShaper_v6_vegetables_sending_invitation_to_a_steak_3.jpg'); /* Replace with the path to your image */
   background-size: cover;
-  width: 100%;
-  height: 100%;
+  height: 80vh;
+}
+.card-avatar{
+  margin-right: 0px !important;
 }
 
+@media (max-width: 600px) {
+  .card-container{
+    width: 100vw !important;
+    height: 100vh !important;
+    margin-right: 10px;
+  }
+  
+  .card-login{
+    justify-content: start !important;
+    width: 100vw;
+
+  }
+  .image {
+    width: 100vw;
+    height: 30vh;
+  }
+}

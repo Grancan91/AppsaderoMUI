@@ -1,8 +1,7 @@
-import { isValidElement, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
-import { Grid, Button, Box, Card, CardHeader, CardActions, Avatar, CardContent,InputAdornment, TextField, Divider, FormControl} from '@mui/material'
+import { Grid, Button, Box, Card, CardHeader, CardActions, Avatar, CardContent,TextField, FormControl} from '@mui/material'
 import { blue } from '@mui/material/colors'
-import { AccountCircle } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 
 function App() {
@@ -21,20 +20,19 @@ function App() {
   return (
     <>
 
-    <Box sx={{ p: 2, border: '1px dashed grey' }} className='container-login'>
+    <Box disableGuters={true} sx={{ p: 2, border: '1px dashed grey' }} className='container-login'>
 
     {/*Card Container of 2 cards*/}
 
     <Card className='card-container'
-    raised={true}
-    
+    raised={true}    
     alignItems={'center'} 
     justifyContent='center'
     sx={{
       display: 'flex',
-      height: '55vh',
-      width: '45vw',
-      backgroundColor: blue[500]}}>
+      height: '80vh',
+      width: '80vw',
+      backgroundColor: 'background'}}>
       
       <Grid container spacing={2}>
       
@@ -42,10 +40,8 @@ function App() {
 
       {/*Card 1 Container for img*/}
       <Card sx={{
-        width: '100%',
-        height: '100%',
-        backgroundColor: blue[500],
-        display: 'flex',
+       // backgroundColor: 'primary',
+      //  display: 'flex',
       }}>
       <div className='image'></div>
       </Card>
@@ -54,10 +50,10 @@ function App() {
       <Grid items sm={6} xs={12}>
 
       {/* Content of Login Form*/}
-      <Card
+      <Card className='card-login'
       sx={{
-        width: '100%',
-        height: '100%',
+        height:'82vh',
+        flexGrow:'1',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -83,7 +79,7 @@ function App() {
               id="outlined-required"
               label="Email Addres"
               type='email'
-              sx={{margin: '10px'}}
+              sx={{margin: '5px'}}
               />
             <TextField    
               onChange={(e) => SetPassord(e.target.value)}        
@@ -93,7 +89,7 @@ function App() {
               required
               type='password'
               label="Password"
-              sx={{margin: '10px'}}
+              sx={{margin: '5px'}}
               />
               </FormControl>
         </CardContent>
