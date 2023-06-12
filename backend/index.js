@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const sequelize = require('./db/index');
 const { initRelationships } = require('./db/relationships');
@@ -23,6 +24,7 @@ const dbConection = async () => {
 
 const expressListener = async () => {
     try {
+        app.use(cors())
         app.use(express.json())
         app.use('/api', router)
         await app.listen(process.env.PORT)

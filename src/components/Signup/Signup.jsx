@@ -1,11 +1,31 @@
+import { useEffect, useState } from 'react';
 import {  Link ,Avatar, Box, Button, Checkbox, FormControlLabel, Grid, TextField, Typography, Paper } from '@mui/material'
-import { LockOutlined } from '@mui/icons-material'
+import { LockOutlined, Login } from '@mui/icons-material'
 import './Signup.css'
+import { login } from '../../services/appsaderoApi';
 
 function Signup() {
+
+  const [email, SetEmail] = useState("")
+  const [password, SetPassword] = useState("");
+
+  const user = 
+  {
+    "email": "abl.gmail.com",
+    "password": "123456"
+}
+
+
+  useEffect(() => {
+    (async () => {
+      await login(user)
+    })()
+  },[])
+
+
   return (
     <div className="grid-content">
-      <Paper elevation={24} borderRadius='20px'>
+      <Paper elevation={24} borderRadius="20px">
         <Grid
           container
           component="main" //Principal container
@@ -52,30 +72,39 @@ function Signup() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
                   name="email"
+                  value={email}
+                  label="Email Address"
                   autoComplete="email"
                   autoFocus
+                  onChange={(e) => {
+                    SetEmail(e.target.value);
+                  }}
                 />
                 <TextField
                   margin="normal"
                   required
                   fullWidth
+                  id="password"
                   name="password"
+                  value={password}
                   label="Password"
                   type="password"
-                  id="password"
                   autoComplete="current-password"
+                  onChange={(e) => {
+                    SetPassword(e.target.value);
+                  }}
                 />
                 <FormControlLabel
                   control={<Checkbox value="remember" />}
                   label="Remember me"
                 />
                 <Button
-                  type="submit"
+                  type="button"
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
+                  onClick={login}
                 >
                   Signup
                 </Button>
