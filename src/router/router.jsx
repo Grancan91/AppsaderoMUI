@@ -8,7 +8,7 @@ import Signup from "../components/Signup/Signup";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Signup />,
+    element: <Signup/>,
   },
   {
     path: "/home",

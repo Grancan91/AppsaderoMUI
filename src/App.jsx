@@ -20,7 +20,7 @@ function App() {
   return (
     <>
 
-    <Box disableGuters={true} sx={{ p: 2, border: '1px dashed grey' }} className='container-login'>
+    <Box disableGuters={true} sx={{ p: 2, border: '1px dashed grey'}} className='container-login'>
 
     {/*Card Container of 2 cards*/}
 
@@ -30,8 +30,8 @@ function App() {
     justifyContent='center'
     sx={{
       display: 'flex',
-      height: '80vh',
-      width: '80vw',
+      height: '60%',
+      width: '60%',
       backgroundColor: 'background'}}>
       
       <Grid container spacing={2}>
